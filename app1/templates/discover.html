@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+       
+       <a href="{% url 'discover' %}"> All  </a> <br/>
+       <a href="{% url 'single' %}"> Single </a> <br/>
+       <a href="{% url 'longdistance' %}"> Long Distance</a> <br/>
+       <a href="{% url 'dating' %}"> Taken </a> <br/>
+
+        {% for user in users %}
+        <article class="post">
+            
+            {% comment %} <h2><a href="{% url 'blog_detail' pk=blog.pk %}">{{ blog.title }}</a></h2> {% endcomment %}
+        User : - {{user.user}} <br/>
+        Username : - {{user.username}} <br/>
+        Bio : - {{user.bio}} <br/>
+        Enrollment number:- {{user.enrollment_number}} <br/>
+        Branch : - {{user.branch}} <br/>
+        Status :- {{user.status}} <br/>
+        Gender :- {{user.gender}} <br/> 
+           
+        </article>
+        <br/>
+        <br/>
+    {% endfor %}
+      
+        <script src="" async defer></script>
+    </body>
+</html>

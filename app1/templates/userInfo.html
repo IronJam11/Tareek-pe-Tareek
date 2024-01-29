@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% include 'header.html' %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        User : - {{userData.user}} <br/>
+        Username : - {{userData.username}} <br/>
+        Bio : - {{userData.bio}} <br/>
+        Enrollment number:- {{userData.enrollment_number}} <br/>
+        Branch : - {{userData.branch}} <br/>
+        Status :- {{userData.status}} <br/>
+        Gender :- {{userData.gender}} <br/>
+        preference 1 :- {{userData.user1}} <br/>
+        preference 2 :- {{userData.user2}} <br/>
+        preference 3 :- {{userData.user3}} <br/>
+
+        <button> <a href="{% url 'patch' %}"> edit </a> </button> 
+       
+        <script src="" async defer></script>
+    </body>
+</html>
